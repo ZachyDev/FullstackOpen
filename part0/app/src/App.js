@@ -1,42 +1,19 @@
 function App() {
-  const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const name = 'Zachy'
+  const age = 20
 
-  // Header component
-  const Header = () => {}
-
-  // Content component
-  const Content = () => {
+  const Hello = ({ props }) => {
     return (
       <div>
-        <Content />
-        <Total />
+        <p>
+          Hello {name}, you are {age} years old.{' '}
+        </p>
       </div>
     )
   }
-
-  // Total component
-  const Total = () => {}
-
   return (
     <div className="App">
-      <Header />
-      <h1>{course}</h1>
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <Hello name={name} age={age} />
     </div>
   )
 }
