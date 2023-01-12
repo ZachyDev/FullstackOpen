@@ -1,24 +1,15 @@
-function App() {
-  const name = 'Zachy'
-  const age = 24
+import React from 'react'
+import { useState } from 'react'
 
-  const Hello = ({ name, age }) => {
-    const bornYear = () => {
-      const currentYear = new Date().getFullYear()
-      return currentYear - age
-    }
-    return (
-      <div>
-        <p>
-          Hello {name}, you are {age} years old.{' '}
-        </p>
-        <p>So you were probably born in {bornYear()}</p>
-      </div>
-    )
-  }
+function App() {
+  const [counter, setCounter] = useState(0)
+  setTimeout(() => {
+    setCounter(counter + 1)
+  },1000)
+ 
   return (
     <div className="App">
-      <Hello name={name} age={age} />
+      <p>Counter: {counter}</p>
     </div>
   )
 }
