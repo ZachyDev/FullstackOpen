@@ -2,7 +2,7 @@ function App() {
   const name = 'Zachy'
   const age = 24
 
-  const Hello = ({ props }) => {
+  const Hello = ({ name, age }) => {
     const bornYear = () => {
       const currentYear = new Date().getFullYear()
       return currentYear - age
